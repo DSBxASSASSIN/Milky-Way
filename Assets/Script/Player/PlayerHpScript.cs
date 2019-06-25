@@ -12,7 +12,7 @@ public class PlayerHpScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Time.timeScale = 1f;
+     
     }
 
     // Update is called once per frame
@@ -33,8 +33,8 @@ public class PlayerHpScript : MonoBehaviour
     {
         if (hp == 0)
         {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("The Game");
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     
  

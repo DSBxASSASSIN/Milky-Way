@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6654781543379477992}
   - component: {fileID: 5406486583617799405}
   - component: {fileID: 5351723605471086074}
-  - component: {fileID: 2876897619328104420}
   - component: {fileID: 7283484756778807034}
+  - component: {fileID: 3114832814083429486}
   m_Layer: 0
   m_Name: Vlieg Enemy 1
   m_TagString: Enemy
@@ -121,18 +121,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 6
---- !u!114 &2876897619328104420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4083948053702091869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c209d84eb5e8ed4e830cfde54057c53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7283484756778807034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,6 +138,25 @@ MonoBehaviour:
   ismoving: 1
   movingRight: 1
   wallDetection: {fileID: 7074817159490444229}
+--- !u!95 &3114832814083429486
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083948053702091869}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc33785411bf2484d9ebf4caab936ec8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6815684958423559750
 GameObject:
   m_ObjectHideFlags: 0

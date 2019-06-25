@@ -60,14 +60,9 @@ public class PlayerController2D : MonoBehaviour
         }
 
         animator.SetFloat("Speed", Mathf.Abs (rb.velocity.x)); // animation
-        if (isGrounded)
-        {
-            animator.SetBool("Grounded", true);
-        }
-        if (!isGrounded)
-        {
-            animator.SetBool("Grounded", false);
-        }
+            animator.SetFloat("Grounded 0", Mathf.Abs(rb.velocity.y));
+       
+        
 
     }
 

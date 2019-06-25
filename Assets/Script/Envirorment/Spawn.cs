@@ -8,26 +8,25 @@ public class Spawn : MonoBehaviour
     bool bIsSpawning = false;
     public bool enemyAlife = false;
 
+    private int counter = 0;
+
     void FixedUpdate()
     {
-        if (bIsSpawning == false && enemyAlife == false && VerwijderScript.alife == true)
+        if (!enemyAlife)
         {
-            bIsSpawning = true;
             enemyAlife = true;
             SpawnEnemy();
         }
     }
     void SpawnEnemy()
     {
-        Instantiate(enemy, transform.position,Quaternion.identity);
-        bIsSpawning = false;
-        VerwijderScript.alife = true;
 
-        if (VerwijderScript.alife == true)
-        {
-            VerwijderScript.alife = false;
-            enemyAlife = false;
+        Debug.Log("COUNTER SPAWN: " + counter);
 
-        }
+            enemy = Instantiate(enemy, transform.position, Quaternion.identity);
+            enemy.GetComponent<VliegEnemyScript>().SpawnerReference = this;
+              enemyAlife = true;
+
+        counter++;
     }
 }

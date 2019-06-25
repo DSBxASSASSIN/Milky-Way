@@ -9,12 +9,27 @@ public class VliegEnemyScript : MonoBehaviour
     public bool ismoving = true;
     public bool movingRight = true;
 
+    public bool alive = true;
+
+    private Spawn _spawnerReference;
+    public Spawn SpawnerReference
+    {
+        set
+        {
+            _spawnerReference = value;
+        }
+    }
+
+
     public Transform wallDetection;
     private Rigidbody2D rb;
+    private Animator animator;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -37,7 +52,8 @@ public class VliegEnemyScript : MonoBehaviour
             transform.position += (-Vector3.up * speed * 3 * Time.deltaTime);
         }
 
-       
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -54,6 +70,16 @@ public class VliegEnemyScript : MonoBehaviour
                 movingRight = true;
             }
         }
-        
+
+        if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Player"))
+        {
+            alive = false;
+            _spawnerReference.enemyAlife = false;
+            Destroy(gameObject);
+        }
+
     }
+
+
+
 }
