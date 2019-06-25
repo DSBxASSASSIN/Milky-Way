@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public GameObject enemy;
+
     bool bIsSpawning = false;
     public bool enemyAlife = false;
 
@@ -23,8 +24,8 @@ public class Spawn : MonoBehaviour
 
         Debug.Log("COUNTER SPAWN: " + counter);
 
-            enemy = Instantiate(enemy, transform.position, Quaternion.identity);
-            enemy.GetComponent<VliegEnemyScript>().SpawnerReference = this;
+            GameObject spawnedEnemy = Instantiate(enemy, transform.position, Quaternion.identity);
+        spawnedEnemy.GetComponent<VliegEnemyScript>().SpawnerReference = this;
               enemyAlife = true;
 
         counter++;

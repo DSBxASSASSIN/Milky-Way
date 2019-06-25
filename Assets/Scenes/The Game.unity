@@ -2493,7 +2493,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 442251245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c6e11632baffb442bc7a25ec484f86f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3be3eaac8dfc408498b87731b70f876b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hearts3: {fileID: 682026044}
+  hearts2: {fileID: 1781545924}
+  hearts1: {fileID: 823520698}
+  dead: {fileID: 382816352}
+  gameOver: {fileID: 0}
+  hearts: []
+  playerHP: {fileID: 459434996}
+--- !u!114 &459434996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2928696448404540081, guid: c4b8aff87fbade04da8e0a20b272e4d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1228662459}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2e7cc76185e2a468f79e653c6c1a48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &478182033

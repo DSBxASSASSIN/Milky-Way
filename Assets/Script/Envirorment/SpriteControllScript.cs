@@ -7,6 +7,8 @@ public class SpriteControllScript : MonoBehaviour
     public GameObject hearts3, hearts2, hearts1, dead, gameOver;
     public GameObject[] hearts;
 
+    public PlayerHpScript playerHP;
+
     void Start()
     {
         hearts3.gameObject.SetActive(true);
@@ -18,7 +20,7 @@ public class SpriteControllScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (PlayerHpScript.hp)
+        switch (playerHP.hp)
         {
             case 3:
                 Debug.Log("3 HP");

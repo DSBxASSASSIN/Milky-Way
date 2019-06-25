@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerHpScript : MonoBehaviour
 {
-    public static int hp = 3;
+    public int hp = 3;
    
     private bool alreadyDamaged = false;
 

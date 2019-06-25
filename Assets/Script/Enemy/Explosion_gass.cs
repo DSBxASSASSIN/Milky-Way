@@ -53,7 +53,7 @@ public class Explosion_gass : MonoBehaviour
 
         if (Current_Radius > 50)
         {
-            PlayerHpScript.hp--;
+            //PlayerHpScript.hp--;
             Destroy(transform.parent.gameObject);
         }
     }
