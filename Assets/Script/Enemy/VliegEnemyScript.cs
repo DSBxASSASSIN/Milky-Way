@@ -30,6 +30,7 @@ public class VliegEnemyScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        animator.SetBool("isAlive", true);
     }
 
     void Update()
@@ -46,13 +47,15 @@ public class VliegEnemyScript : MonoBehaviour
         if (ismoving)
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
+            animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         }
         else
         {
             transform.position += (-Vector3.up * speed * 3 * Time.deltaTime);
+            animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         }
 
-        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+        
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -74,6 +77,7 @@ public class VliegEnemyScript : MonoBehaviour
         if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("Player"))
         {
             alive = false;
+
             _spawnerReference.enemyAlife = false;
             Destroy(gameObject);
         }

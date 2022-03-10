@@ -6,7 +6,7 @@ public class Spawn : MonoBehaviour
 {
     public GameObject enemy;
 
-    bool bIsSpawning = false;
+
     public bool enemyAlife = false;
 
     private int counter = 0;

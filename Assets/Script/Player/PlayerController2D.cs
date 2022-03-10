@@ -82,7 +82,7 @@ public class PlayerController2D : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Finish"))
         {
-            SceneManager.LoadScene("Main Menu");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
